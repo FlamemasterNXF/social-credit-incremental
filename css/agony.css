@@ -1,0 +1,54 @@
+.flexBox {
+    display: flex;
+    align-items: center;
+    place-content:center
+}
+.creditGamblingContainer{
+    flex-direction: column;
+}
+.text{
+    color: #000000;
+    font-family: DosisExtraBold;
+}
+.image{
+    width: 99%;
+    height: 99%;
+    opacity: 70%;
+    position: absolute;
+}
+#gamble{
+    top: 50px;
+    margin-top: 30px;
+    font-family: DosisExtraBold;
+    height: 70px;
+    width: 400px;
+    position: absolute;
+}
+#creditScore{
+    top: 20px;
+    color: #403000;
+    margin-top: 10px;
+    font-size: 30px;
+    position: absolute;
+}
+#increase{
+    top: 100px;
+    margin-top: 60px;
+    font-family: DosisExtraBold;
+    height: 70px;
+    width: 350px;
+    position: absolute;
+}
+#text1{
+    top: 10px;
+    position: absolute;
+}
+html{
+    background-image: url("../god.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@font-face {
+    font-family: 'DosisExtraBold';
+    src: url(Dosis/static/Dosis-ExtraBold.ttf);
+}
