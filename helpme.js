@@ -6,7 +6,7 @@ function gamble(min, max){
     let displayed
     random = Math.floor(Math.random()*(max-min)+min)
     falseRandom = Math.random()*(max-min)+min
-    displayed = data.random * ((1000 * falseRandom)*sMax)
+    displayed = random * ((1000 * falseRandom)*sMax)
     socialCredit = displayed
 }
 function increaseMax(min, max){
