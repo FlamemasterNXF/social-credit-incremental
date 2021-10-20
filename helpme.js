@@ -1,12 +1,12 @@
 let socialCredit = new Decimal(0)
-let random = -1
+let random = new Decimal(-1)
 let sMax = new Decimal(1)
 function gamble(min, max){
-    let falseRandom
-    let displayed
-    random = Math.floor(Math.random()*(max-min)+min)
+    let falseRandom = new Decimal(0)
+    let displayed = new Decimal(0)
+    random = new Decimal(Math.floor(Math.random()*(max-min)+min))
     falseRandom = Math.random()*(max-min)+min
-    displayed = random * ((1000 * falseRandom)*sMax)
+    displayed = random.times((new Decimal(1000).times(falseRandom)).times(sMax))
     socialCredit = new Decimal(displayed)
 }
 function increaseMax(min, max){
