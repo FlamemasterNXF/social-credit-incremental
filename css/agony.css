@@ -39,6 +39,14 @@
     width: 350px;
     position: absolute;
 }
+#musicTrigger{
+    top: 200px;
+    margin-top: 60px;
+    font-family: DosisExtraBold;
+    height: 30px;
+    width: 300px;
+    position: absolute;
+}
 #text1{
     top: 10px;
     position: absolute;

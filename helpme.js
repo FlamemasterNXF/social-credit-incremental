@@ -1,18 +1,18 @@
-let socialCredit = 0
+let socialCredit = new Decimal(0)
 let random = -1
-let sMax = 1
+let sMax = new Decimal(1)
 function gamble(min, max){
     let falseRandom
     let displayed
     random = Math.floor(Math.random()*(max-min)+min)
     falseRandom = Math.random()*(max-min)+min
     displayed = random * ((1000 * falseRandom)*sMax)
-    socialCredit = displayed
+    socialCredit = new Decimal(displayed)
 }
 function increaseMax(min, max){
     let maxMultiplier
     maxMultiplier = Math.random()*(max-min)+min
-    sMax *= maxMultiplier
+    sMax = sMax.times(maxMultiplier)
 }
 function mainLoop(){
     updateHTML()
@@ -20,3 +20,25 @@ function mainLoop(){
 window.setInterval(function(){
     mainLoop()
 }, 10);
+//msuic
+function sound(src) {
+    //what is this its all from w3 schools help
+    this.sound = document.createElement("audio");
+    this.sound.src = src;
+    this.sound.setAttribute("preload", "auto");
+    this.sound.setAttribute("controls", "none");
+    this.sound.style.display = "none";
+    document.body.appendChild(this.sound);
+    this.play = function(){
+        this.sound.play();
+    }
+    this.stop = function(){
+        this.sound.pause();
+    }
+}
+let china
+function music(){
+    china = new sound("Red_Sun_in_the_Sky.mp3");
+    china.play()
+    document.getElementById("musicTrigger").innerHTML = "there is no going back...中共的荣耀"
+}
