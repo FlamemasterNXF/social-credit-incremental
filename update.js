@@ -1,6 +1,6 @@
 let creditImages = document.getElementsByClassName("image")
 function updateHTML(){
-    document.getElementById("creditScore").innerHTML = `Your Social Credit Score is ${format(socialCredit)} (*${format(sMax)})`
+    document.getElementById("creditScore").innerHTML = `Your Social Credit Score is ${format(data.socialCredit)} (*${format(data.sMax)})`
     for (let i=0; i<creditImages.length; i++){
         checkImages(i)
     }

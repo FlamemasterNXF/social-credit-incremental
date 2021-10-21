@@ -1,18 +1,16 @@
-let socialCredit = new Decimal(0)
 let random = new Decimal(-1)
-let sMax = new Decimal(1)
 function gamble(min, max){
     let falseRandom = new Decimal(0)
     let displayed = new Decimal(0)
-    random = new Decimal(Math.floor(Math.random()*(max-min)+min))
+    data.random = new Decimal(Math.floor(Math.random()*(max-min)+min))
     falseRandom = Math.random()*(max-min)+min
-    displayed = random.times((new Decimal(1000).times(falseRandom)).times(sMax))
-    socialCredit = new Decimal(displayed)
+    displayed = data.random.times((new Decimal(1000).times(falseRandom)).times(data.sMax))
+    data.socialCredit = new Decimal(displayed)
 }
 function increaseMax(min, max){
     let maxMultiplier
     maxMultiplier = Math.random()*(max-min)+min
-    sMax = sMax.times(maxMultiplier)
+    data.sMax = data.sMax.times(maxMultiplier)
 }
 function mainLoop(){
     updateHTML()
