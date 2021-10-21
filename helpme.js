@@ -4,7 +4,7 @@ function gamble(min, max){
     let displayed = new Decimal(0)
     random = new Decimal(Math.floor(Math.random()*(max-min)+min))
     falseRandom = Math.random()*(max-min)+min
-    displayed = data.random.times((new Decimal(1000).times(falseRandom)).times(data.sMax))
+    displayed = random.times((new Decimal(1000).times(falseRandom)).times(data.sMax))
     data.socialCredit = new Decimal(displayed)
 }
 function increaseMax(min, max){
