@@ -2,7 +2,7 @@ let random = new Decimal(-1)
 function gamble(min, max){
     let falseRandom = new Decimal(0)
     let displayed = new Decimal(0)
-    data.random = new Decimal(Math.floor(Math.random()*(max-min)+min))
+    random = new Decimal(Math.floor(Math.random()*(max-min)+min))
     falseRandom = Math.random()*(max-min)+min
     displayed = data.random.times((new Decimal(1000).times(falseRandom)).times(data.sMax))
     data.socialCredit = new Decimal(displayed)

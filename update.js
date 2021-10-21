@@ -6,7 +6,7 @@ function updateHTML(){
     }
 }
 function checkImages(i){
-    if (random === i){
+    if (random.equals(i)){
         creditImages[i].style.display = 'flex'
     }
     else{
