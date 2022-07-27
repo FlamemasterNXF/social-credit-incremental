@@ -10,6 +10,7 @@ function gamble(min, max){
 function increaseMax(min, max){
     let maxMultiplier
     maxMultiplier = Math.random()*(max-min)+min
+    random = new Decimal(Math.floor(Math.random()*(max-min)+min))
     data.sMax = data.sMax.times(maxMultiplier)
 }
 function mainLoop(){
